@@ -1,0 +1,49 @@
+\documentclass[a4j,12pt]{tarticle}
+\usepackage {bxwareki}
+\thispagestyle{empty}
+
+%%% コマンド初め %%%
+
+% タイトル（退職届）
+\newcommand{\タイトル}{\centerline{}\centerline{\Huge{退}\qquad\Huge{職}\qquad\Huge{届}}\vspace{25mm}}
+% 本文（退職日の記載）
+\newcommand{\退職日}[3]{\rightline{私事、}\leftline{このたび一身上の都合により、{\warekisetdate{#1}{#2}{#3}\warekijkanjidate}をもちまして}\leftline{退職いたします。}\vspace{20mm}}
+% 提出日（自動で今日の日付が入力される）
+\newcommand{\提出日}{\rightline{\warekijkanjidate\qquad\qquad\qquad\qquad\quad}}
+% 所属 {部署名} {課名}
+\newcommand{\所属}[2]{\rightline{{#1}{部}\quad{#2}{課}\qquad\quad}}
+% 印鑑印
+\newcommand{\印鑑印}{\rightline{{\textcircled{\raisebox{-2.2pt}{\normalsize{印}}}}}\vspace{20mm}}
+% 退職者名 {名前}
+\newcommand{\退職者名}[1]{\rightline{#1}\vspace{20mm}}
+% 会社名 {会社種別} {会社名}
+\newcommand{\会社名}[2]{\leftline{\quad{#1}\quad{#2}}}
+% 代表名 {代表取締役} {名前}
+\newcommand{\代表名}[2]{\leftline{{#1}\quad{#2}\quad{殿}}}
+
+%%% コマンド終わり %%%
+
+\begin{document}
+\Large{}
+
+% タイトル（退職届）
+\タイトル
+
+% 退職日 {年} {月} {日}
+\退職日{2100}{3}{31}
+
+% 提出日
+\提出日
+% 所属 {部署名} {課名}
+\所属{◎◎◎}{〇〇〇}
+% 署名か印鑑印のどちらかをコメントアウトして使用すること
+\退職者名{××　××}
+% \印鑑印
+
+% 会社名 {会社種別} {会社名}
+\会社名{株式会社}{☆☆☆☆}
+% 代表名 {代表取締役} {名前}
+\代表名{代表取締役}{□□　□□}
+
+
+\end{document}
